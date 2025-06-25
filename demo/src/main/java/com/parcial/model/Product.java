@@ -15,13 +15,13 @@ public class Product {
 
     
     
-    @NotNull(message = "Name is required")
-    @Size(min = 2, message = "Name must be at least 2 characters")
+    @NotNull(message = "El nombre es obligatorio y no puede estar vacío")
+    @Size(min = 2, message = "El nombre debe tener al menos 2 caracteres y no puede estar vacío")
     private String name;
     
     private String description;
     
-    @NotNull(message = "Price is required")
+    @NotNull(message = "El precio es obligatorio y no puede estar vacío")
     private Double price;
     private Integer stock;
     private String category;

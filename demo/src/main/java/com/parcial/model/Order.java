@@ -19,16 +19,16 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull(message = "Client is required")
+    @NotNull(message = "Se requiere Cliente para la orden")
     private String client;
 
     private LocalDate date;
 
-    @NotNull(message = "Status is required")
+    @NotNull(message = "Se requiere Estado para la orden")
     private String status;
 
-    @NotNull(message = "Products are required")
-    @Size(min = 1, message = "At least one product is required")
+    @NotNull(message = "Se requiere Productos para la orden")
+    @Size(min = 1, message = "Se requiere almenos un producto")
     @ManyToMany
     @JoinTable(
         name = "order_products", 
@@ -39,7 +39,6 @@ public class Order {
 
     private Double total;
 
-    // Métodos Getter y Setter
     public Long getId() {
         return id;
     }

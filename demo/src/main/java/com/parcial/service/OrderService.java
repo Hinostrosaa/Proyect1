@@ -16,7 +16,7 @@ public class OrderService {
 
     public Order createOrder(Order order) {
         if (order.getProducts() == null || order.getProducts().isEmpty()) {
-        throw new IllegalArgumentException("Products cannot be null or empty");
+        throw new IllegalArgumentException("Los productos no pueden ser nulos o vacíos");
     }
     // Calcular el total de la orden
     double total = order.getProducts().stream()
